@@ -738,6 +738,14 @@ client.on('message', function(message) {
   }
 });
 
-
+client.on('message', message => {
+  if (message.content.startsWith("-invite")) {
+  message.channel.send({
+      embed: new Discord.RichEmbed()
+          .addField('``invite``' ,`[ shorturl.at/ezIP1 ]` , true)
+          .setColor('#d30846')
+  })
+}
+});
 
 client.login(process.env.BOT_TOKEN);
