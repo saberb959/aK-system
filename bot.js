@@ -3,6 +3,7 @@ const client = new Discord.Client();
 var fs = require('fs');
 const prefix = '-';
 const adminprefix = '-';
+const developers = ["390944460940247041","705827746504507425"]
 console.log("Bot is on By saber");
 
 client.on('message' , message => {
