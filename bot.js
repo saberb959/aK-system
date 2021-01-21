@@ -461,6 +461,7 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
 
 });
 
+
 client.on('message', message => {
   var args = message.content.split(/[ ]+/)
   if(message.content.includes('gmail')){
@@ -521,6 +522,12 @@ client.on('message', message => {
 
 });
 
-
+client.on('message', message => {
+  // If the message is "what is my avatar"
+  if (message.content === '-avatar') {
+    // Send the user's avatar URL
+    message.reply(message.author.displayAvatarURL());
+  }
+});
 
 client.login(process.env.BOT_TOKEN);
