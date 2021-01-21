@@ -735,7 +735,7 @@ client.on('message', function(message) {
           .setThumbnail(`${message.author.avatarURL}`)
           .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
           .setFooter(`من (@${message.author.tag})  |  (${message.author.id})`)
-      client.channels.get("630240593951588355").send({ embed: stewart });
+      client.channels.get("801909189919506482").send({ embed: stewart });
   }
 });
 
